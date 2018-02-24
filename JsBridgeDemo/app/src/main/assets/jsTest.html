@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jsTest</title>
+        <script type="text/javascript" src="JSBridge.js"></script>
+        <script>
+
+
+    function ClickNativeToast(){
+        var msg = "{'msg':'js request'}";
+        JSBridge.call('test',"T",msg,
+        function(res){
+            console.log("执行回调");
+            alert(JSON.stringify(res))
+            }
+        )
+    }
+
+      function ClickNativeToast2(){
+        var msg = "{'msg':'js request'}";
+        JSBridge.call('T',"",msg,
+        function(res){
+            console.log("执行回调");
+            alert(JSON.stringify(res))
+            }
+        )
+    }
+
+
+         </script>
+    </head>
+
+    <body>
+        <button type="button" id="button1" onclick="ClickNativeToast2()">点击调用Android代码</button>
+    </body>
+
+
+
+
+</html>
+
