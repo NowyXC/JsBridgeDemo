@@ -9,3 +9,5 @@
 > WebChromeClient主要重写了较为少用的onJsPrompt方法，对JS的window.prompt(uri, "")进行捕获，
 > 此例子中WebChromeClient交互实现了异步响应给js端的
 
+##
+参考链接：http://android.jobbole.com/82507/
